@@ -87,17 +87,11 @@
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Cg%20fill='none'%20stroke='%23234C90'%20stroke-width='1'%20stroke-opacity='0.55'%3E%3Cpath%20d='M0%2040%20A20%2020%200%200%201%2040%2040'/%3E%3Cpath%20d='M6%2040%20A14%2014%200%200%201%2034%2040'/%3E%3Cpath%20d='M12%2040%20A8%208%200%200%201%2028%2040'/%3E%3Cpath%20d='M-20%2020%20A20%2020%200%200%201%2020%2020'/%3E%3Cpath%20d='M-14%2020%20A14%2014%200%200%201%2014%2020'/%3E%3Cpath%20d='M-8%2020%20A8%208%200%200%201%208%2020'/%3E%3Cpath%20d='M20%2020%20A20%2020%200%200%201%2060%2020'/%3E%3Cpath%20d='M26%2020%20A14%2014%200%200%201%2054%2020'/%3E%3Cpath%20d='M32%2020%20A8%208%200%200%201%2048%2020'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 40px 40px;
     background-repeat: repeat;
-    /* subtle audio-pressure rings emanating from a source in the lower-left, dissipating outward */
-    -webkit-mask: radial-gradient(72% 80% at 0% 100%,
-        rgba(0,0,0,0.5) 0 7%, rgba(0,0,0,0.12) 17%,
-        rgba(0,0,0,0.44) 30%, rgba(0,0,0,0.1) 45%,
-        rgba(0,0,0,0.36) 60%, rgba(0,0,0,0.08) 76%,
-        transparent 92%);
-            mask: radial-gradient(72% 80% at 0% 100%,
-        rgba(0,0,0,0.5) 0 7%, rgba(0,0,0,0.12) 17%,
-        rgba(0,0,0,0.44) 30%, rgba(0,0,0,0.1) 45%,
-        rgba(0,0,0,0.36) 60%, rgba(0,0,0,0.08) 76%,
-        transparent 92%);
+    /* one smooth fade: full at the lower-left corner, dissipating toward the top-right */
+    -webkit-mask: radial-gradient(120% 120% at 0% 100%,
+        #000 0%, rgba(0,0,0,0.55) 38%, transparent 82%);
+            mask: radial-gradient(120% 120% at 0% 100%,
+        #000 0%, rgba(0,0,0,0.55) 38%, transparent 82%);
   }
 
   .stage {
